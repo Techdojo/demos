@@ -82,7 +82,7 @@ body.connecting #loading {
 
 #whoosh {
   border-radius: 8px;
-  
+  position:fixed;
 }
 
 #no-bluetooth {

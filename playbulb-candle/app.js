@@ -50,8 +50,9 @@ function handleBlowNotifications(event) {
 */
 
 function clearWhoosh() {
-  document.getElementById('whoosh').style.display = "block";
+  document.getElementById('whoosh').style.display = "none";
 }
+
 function handleBlowNotifications(event) {
   document.getElementById("whoosh").style.display = "block";
   setTimeout( clearWhoosh, 500);
