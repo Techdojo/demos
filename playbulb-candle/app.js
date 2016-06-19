@@ -50,9 +50,7 @@ function handleBlowNotifications(event) {
 */
 
 function clearWhoosh() {
-  document.querySelector('#whoosh');
-  if (whoosh)
-    whoosh.style.display = "block";
+  document.getElementById('whoosh').style.display = "block";
 }
 function handleBlowNotifications(event) {
   document.getElementById("whoosh").style.display = "block";
