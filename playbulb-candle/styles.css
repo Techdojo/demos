@@ -83,6 +83,7 @@ body.connecting #loading {
 #whoosh {
   border-radius: 8px;
   position:fixed;
+  width: 75%; min-height: 60px !important
 }
 
 #no-bluetooth {
