@@ -57,6 +57,7 @@ function handleBlowNotifications(event) {
   var whoosh = document.getElementById("whoosh")
   whoosh.style.display = "block";
   setTimeout( clearWhoosh, 500);
+  let v = event.target.value;
   whoosh.style.backgroundColor = ((v.byteLength == 8 &&
       v.getUint8(1) == 0 && v.getUint8(2) == 0 && v.getUint8(3) == 0)) ? "red" : "green";
 }
