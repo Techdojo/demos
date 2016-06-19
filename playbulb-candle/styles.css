@@ -89,6 +89,7 @@ body.connecting #loading {
   text-align: center;
   padding: 12px;
   color: #fff;
+  z-index:10;
 }
 
 #no-bluetooth {
