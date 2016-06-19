@@ -54,8 +54,11 @@ function clearWhoosh() {
 }
 
 function handleBlowNotifications(event) {
-  document.getElementById("whoosh").style.display = "block";
+  var whoosh = document.getElementById("whoosh")
+  whoosh.style.display = "block";
   setTimeout( clearWhoosh, 500);
+  whoosh.style.backgroundColor = ((v.byteLength == 8 &&
+      v.getUint8(1) == 0 && v.getUint8(2) == 0 && v.getUint8(3) == 0)) ? "red" : "green";
 }
 
 /* Color picker */
