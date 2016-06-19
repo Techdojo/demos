@@ -36,6 +36,7 @@ document.querySelector('#deviceName').addEventListener('input', function() {
 
 /* Blow notifications */
 
+/*
 function handleBlowNotifications(event) {
   let v = event.target.value;
   if (v.byteLength == 8 &&
@@ -45,6 +46,17 @@ function handleBlowNotifications(event) {
   } else {
     document.querySelector('#blow').textContent = 'Candle ON';
   }
+}
+*/
+
+function clearWhoosh() {
+  document.querySelector('#whoosh');
+  if (whoosh)
+    whoosh.style.display = "block";
+}
+function handleBlowNotifications(event) {
+  document.getElementById("whoosh").style.display = "block";
+  setTimeout( clearWhoosh, 500);
 }
 
 /* Color picker */
@@ -152,6 +164,8 @@ window.addEventListener('unhandledrejection', function() {
 window.onload = function() {
   var connect = document.getElementById("connect");
   var no_bt = document.getElementById("no-bluetooth");
+  var whoosh = document.getElementById("whoosh");
+  whoosh.style.display = "none";
   if (navigator.bluetooth == undefined) {
     console.log("No navigator.bluetooth found.");
     connect.style.display = "none";
